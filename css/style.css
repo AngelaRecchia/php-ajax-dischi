@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: black;
+    color: white;
+}
+
+main {
+    background-color: rgb(44, 44, 44);
+}
+
+.poster {
+    width: 100%;
+}
+
+.title {
+    font-weight: 700;
+}
+
+.year, .author {
+    font-size: 14px;
+}
+
+.year {
+    font-style: italic;
+}
+
