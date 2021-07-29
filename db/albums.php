@@ -60,5 +60,6 @@ $albums = [
         'year' => 2010,
         'poster' => 'https://upload.wikimedia.org/wikipedia/en/4/47/Timber_Timbre_2009_Album.jpg'
     ]
-]
+    ];
+
 ?>
