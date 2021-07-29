@@ -19,30 +19,32 @@ Attraverso un’altra chiamata api, filtrare gli album per genere -->
 
     <div id="app">
 
-        <header class="py-3">
-        <h2 class="text-center">Albums</h2>
+        <header class="d-flex justify-content-between align-items-center p-3">
+            <h2>Albums</h2>
+            <select name="genres" @change="filterGenre">
+                <option v-for="genre in genres" :value="genre">{{genre}}</option>
+            </select>
         </header>
 
         <main>
 
-        <div class="container">
+            <div class="container">
 
-            <div v-if="!loading" class="row row-cols-6 row-cols-md-4 row-cols-lg-5">
+                <div class="row row-cols-6 row-cols-md-4 row-cols-lg-5">
 
-                <div v-for="album in albums" class="col album text-center text-white my-3">
+                    <div v-for="album in albums" class="col album text-center text-white my-3">
 
                         <img class="poster mb-2" :src="album.poster" :alt="album.title">
-
                         <div class="title">{{album.title}}</div>
                         <span class="year">{{album.year}}</span>
                         <span> &#9679; </span>
                         <span class="author">{{album.author}}</span>
-                </div>
-                
-            </div>
 
-            <div v-else>Loading</div>
-        </div>
+                    </div>
+
+                </div>
+
+            </div>
 
         </main>
     </div>

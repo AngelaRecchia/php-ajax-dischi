@@ -7,10 +7,15 @@
 header {
     background-color: black;
     color: white;
+    height: 100px;
 }
 
 main {
     background-color: rgb(44, 44, 44);
+}
+
+main .container {
+    min-height: calc(100vh - 100px);
 }
 
 .poster {
