@@ -26,10 +26,22 @@ Attraverso un’altra chiamata api, filtrare gli album per genere -->
         <main>
 
         <div class="container">
-            <div class="row row-cols-6 row-cols-md-4 row-cols-lg-5">
 
+            <div v-if="!loading" class="row row-cols-6 row-cols-md-4 row-cols-lg-5">
+
+                <div v-for="album in albums" class="col album text-center text-white my-3">
+
+                        <img class="poster mb-2" :src="album.poster" :alt="album.title">
+
+                        <div class="title">{{album.title}}</div>
+                        <span class="year">{{album.year}}</span>
+                        <span> &#9679; </span>
+                        <span class="author">{{album.author}}</span>
+                </div>
                 
             </div>
+
+            <div v-else>Loading</div>
         </div>
 
         </main>
